@@ -1,5 +1,9 @@
 #!/bin/sh
 
+# Autor: Felipe Oliveira
+# Versão : 2017073001
+# Script para backup incremental 
+
 exec 1>/var/log/backup.log 2>/var/log/backup.log
 
 DATA=`date "+%Y-%m-%d %H:%M:%S"`
@@ -8,7 +12,7 @@ STATUS_BKP="/var/www/html/statusbackup.txt"
 
 
 #Label do HD de backup, pode ser identificado com o comando bklid
-EXT_DEVICE_LABEL="NOME" #somente alterar aqui
+EXT_DEVICE_LABEL="NOME"
 EXT_DEVICE="/dev/disk/by-label/$EXT_DEVICE_LABEL"
 
 #Ponto de montagem do HD de backup
